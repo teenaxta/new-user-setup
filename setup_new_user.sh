@@ -15,6 +15,7 @@ create_user() {
 install_zsh() {
     sudo apt update
     sudo apt install -y zsh
+    chsh -s $(which zsh)
     echo "Zsh installed."
 }
 
