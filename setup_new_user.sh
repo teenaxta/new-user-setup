@@ -77,6 +77,6 @@ install_miniconda
 install_zsh_plugins
 update_zshrc
 install_essentials
-revoke_sudo
+check_and_revoke_sudo
 
 echo "Setup complete for user $newusername."
