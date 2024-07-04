@@ -51,8 +51,8 @@ update_zshrc() {
 # Function to revoke sudo access
 install_essentials() {
     sudo apt install -y nvtop
-    sudo apt install -y snapd 
-    sudo snap install -y teams-for-linux
+    # sudo apt install -y snapd
+    # sudo snap install -y teams-for-linux
     echo "Installed essentials."
 }
 
