@@ -1,4 +1,4 @@
-# Guide to making a new user
+# New User creation script
 
 This simple script will make a new and install
 1. Zsh
