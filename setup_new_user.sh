@@ -56,10 +56,15 @@ install_essentials() {
     echo "Installed essentials."
 }
 
-# Function to revoke sudo access
-revoke_sudo() {
-    sudo deluser $newusername sudo
-    echo "Sudo access revoked for $newusername."
+# Function to check and revoke sudo access
+check_and_revoke_sudo() {
+    read -p "Do you want to keep $newusername as a sudo user? (yes/no): " response
+    if [[ $response =~ ^[Nn][Oo]$ ]]; then
+        sudo deluser $newusername sudo
+        echo "Sudo access revoked for $newusername."
+    else
+        echo "Sudo access retained for $newusername."
+    fi
 }
 
 
@@ -72,6 +77,6 @@ install_miniconda
 install_zsh_plugins
 update_zshrc
 install_essentials
-# revoke_sudo
+revoke_sudo
 
 echo "Setup complete for user $newusername."

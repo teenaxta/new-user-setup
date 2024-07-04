@@ -13,5 +13,3 @@ Run the script using
 chmod +x setup_new_user.sh
 sudo ./setup_new_user.sh
 ```
-
-If you want to make a user without sudo access then uncomment the revoke_sudo call
